@@ -81,7 +81,6 @@ class RegisterController extends Controller
                         array_push($ids, $user['id']);
                     }
                 }
-                //$register->user()->sync($id);
                 $register->save();
             }
             DB::commit();

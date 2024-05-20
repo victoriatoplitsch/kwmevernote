@@ -98,7 +98,7 @@ class NoteController extends Controller
                 $note->tags()->sync($tag_ids);
                 $note->save();
 
-                // Update todos relation if needed
+                // Update todos relation if needed - mitHilfe von ChatGPT
                 if (isset($request['todos'])) {
                     $todoIds = array_column($request['todos'], 'id');
                     $note->todos()->sync($todoIds);
